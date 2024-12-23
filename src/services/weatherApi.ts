@@ -14,6 +14,7 @@ export interface WeatherData {
   }>;
   name: string;
   wind: { speed: number };
+  dt: number;
 }
 
 export const getWeatherByCity = async (city: string): Promise<WeatherData> => {

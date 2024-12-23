@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { getWeatherByCity, WeatherData } from "../services/weatherApi";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { Building2, SearchIcon } from "lucide-react";
+import { MapPinned, SearchIcon } from "lucide-react";
 
 interface SearchBarProps {
   onSearch: (data: WeatherData) => void;
@@ -36,7 +36,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   return (
     <form onSubmit={handleSubmit} className="mb-4">
       <div className="relative">
-        <Building2 className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <MapPinned className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
           type="text"
           value={city}
